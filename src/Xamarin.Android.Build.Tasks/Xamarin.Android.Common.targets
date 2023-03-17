@@ -1115,7 +1115,7 @@ because xbuild doesn't support framework reference assemblies.
 </Target>
 
 <Target Name="_GenerateAndroidResourceDir"
-	Inputs="$(MSBuildProjectFullPath);@(_AndroidMSBuildAllProjects);@(_AndroidResolvedResources);$(_AndroidBuildPropertiesCache)"
+	Inputs="$(MSBuildProjectFullPath);@(_AndroidMSBuildAllProjects);@(_AndroidResolvedResources);@(_AndroidResourceDest);$(_AndroidBuildPropertiesCache)"
 	Outputs="$(_AndroidResFlagFile)"
 	DependsOnTargets="$(_OnResolveMonoAndroidSdks)">
 	<CheckForInvalidResourceFileNames
